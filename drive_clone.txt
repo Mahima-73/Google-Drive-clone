@@ -1,0 +1,5 @@
+created a user login page
+mongoDB Compass wasnt working so i did this to make i work
+If MongoDB is installed as a service, ensure the service is running:
+Press Win + R, type services.msc, and press Enter.
+Find MongoDB in the list, right-click, and select Start.
