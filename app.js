@@ -6,6 +6,8 @@ dotenv.config();
 const connectToDB = require('./config/db')
 const cookieParser = require('cookie-parser');
 connectToDB();
+const indexRouter = require('./routes/index.routes')
+app.use('/', indexRouter)
 
 app.use(cookieParser())
 app.use(express.json()); 
