@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", intial-scale=1.0>
+        <meta name="viewport" content="width=device-width" initial-scale=1.0>
         <title>Home page</title>
         <script type="text/javascript" src="validation.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +34,17 @@
                     <i class="ri-close-line"></i>
                 </button>
 
+                </div>
+                <div class="files mt-3 flex flex-col gap-2">
+                <% files.forEach((file) => { %>
+                    <div class="p-2 cursor-pointer rounded-md bg-gray-300 flex justify-between">
+                        <h1><%= file.originalname %></h1>
+                        <a href="/download/<%= file.path %>" class="text-blue-500 hover:text-blue-700" download="<%= file.originalname %>">
+                            <i class="ri-download-line"></i>
+                        </a>
+                    </div>
+                <% }); %>
+            </div>
                 </div>
             </main>
 
